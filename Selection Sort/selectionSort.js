@@ -1,5 +1,5 @@
 /*
-Write a program to sort an array using selection sort | Using One Array(Same Array)
+Write a program to sort an array using selection sort
 */
 
 let arr = [9,10,2,-11,41,40]

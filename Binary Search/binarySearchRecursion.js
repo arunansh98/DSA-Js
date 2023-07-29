@@ -11,6 +11,9 @@ var binarySearch = function(arr,ele,low,high){
     if(arr[mid]===ele){
         return mid;
     }
+    if(low>mid){
+        return -1;
+    }
     else {
         if(ele > arr[mid]){
             return binarySearch(arr,ele,mid + 1,high);
@@ -21,4 +24,4 @@ var binarySearch = function(arr,ele,low,high){
     }
 }
 
-console.log(binarySearch(arr,3,0,arr.length-1))
+console.log(binarySearch(arr,element,0,arr.length-1))

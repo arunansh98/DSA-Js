@@ -1,6 +1,6 @@
 
 /* 
-Write a program to find greatest the element in an array using recursion
+Write a program to find the greatest element in an array using recursion
 */
 
 var greater = function(arr,i,greatest){

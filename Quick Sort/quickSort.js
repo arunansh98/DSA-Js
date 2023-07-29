@@ -36,8 +36,4 @@ var swap = function(a,b,arr){
     arr[b] = temp;
 }
 
-var getRndInteger= function(min, max) {
-  return Math.floor(Math.random() * (max - min) ) + min;
-}
-
 console.log(sortArray([5,4,3,2,-1,-1,1]))

@@ -18,4 +18,8 @@ var quickSort = function(arr) {
     }
 }
 
+var getRndInteger= function(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+
 console.log(sortArray([5,4,3,-1,-1,2,1]))

@@ -63,7 +63,7 @@ var findShortestPathCount = function(graph,src,end){
                                 foundKeyArray = [...findShortestPath(arr,graph,key),key]; 
                             }
                             else {
-                                if(!queue.includes(key) && !(graph[key] && Object?.keys(graph[key])?.includes(item))){ // check for duplicate key and cyclic nodes
+                                if(!arr.includes(key)){ // check for duplicate key and cyclic nodes
                                 queue.push(key);
                                 } 
                             }
@@ -92,7 +92,7 @@ var findShortestPath = function(arr,graph,key){
     while(i<=arr.length-1){
         if(graph[arr[i]]){
             if(Object?.keys(graph[arr[i]])?.includes(key)){
-                returnValue = [...findShortestPath(arr,graph,arr[i]),arr[i]];
+                returnValue = !(graph[key] && Object?.keys(graph[key])?.includes(arr[i]) && arr[i]!==src) ? [...findShortestPath(arr,graph,arr[i]),arr[i]] : []; // check for cyclic nodes
                 break;
             }
         }

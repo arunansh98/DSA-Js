@@ -42,16 +42,15 @@ graph['A']['C'] = 'NOT REACHED';
 /* Function to find shortest path count - START */
 var findShortestPathCount = function(graph,src,end){
     let found = false;
-    let loopArray = [src];
-    let queue;
-    let foundKey;
+    let queue = [src];
     let foundKeyArray = [];
     let arr = [];
     let count = 0;
-    while(found === false && loopArray?.length > 0){
-        queue = [];
-        arr = arr.concat(loopArray);
-        loopArray.forEach(
+    let initialLength;
+    while(found === false && queue?.length > 0){
+        arr = arr.concat(queue);
+        initialLength = queue.length;
+        queue.forEach(
             (item)=>{
                 if(graph[item]){
                     Object?.keys(graph[item]).forEach(
@@ -59,7 +58,6 @@ var findShortestPathCount = function(graph,src,end){
                             if(graph[item][key] === end){
                                 found = true;
                                 count = count + 1; 
-                                foundKey = key; 
                                 foundKeyArray = [...findShortestPath(arr,graph,key),key]; 
                             }
                             else {
@@ -74,7 +72,8 @@ var findShortestPathCount = function(graph,src,end){
         )
         if(!found){
             count = count + 1;
-            loopArray = queue;
+            queue = queue.slice(initialLength,queue.length);
+            console.log('queue',queue)
         }    
     }
     console.log(`${found ? `Shortest Path :-  ${foundKeyArray.join("  ->  ")}` : 'Not Found !!'}`);

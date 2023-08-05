@@ -44,10 +44,6 @@ parent[src] = 'NONE';
 /* Set initial parent - END */
 
 
-let processed_nodes = [];
-let node_to_process = src;
-
-
 
 /* Find lowest cost node - END */
 var findLowestCostNode = function(processed_nodes,costs){
@@ -83,6 +79,9 @@ var findLowestCostPath = function(parent,lowest_cost_node){
 
 
 /* Update costs of neighbours - START */
+let processed_nodes = [];
+let node_to_process = src;
+
 while(node_to_process !== 'NONE'){
     let neighbours = graph[node_to_process];
     let cost = costs[node_to_process];

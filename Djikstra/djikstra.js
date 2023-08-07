@@ -45,7 +45,7 @@ parent[src] = 'NONE';
 
 
 
-/* Find lowest cost node - END */
+/* Find lowest cost node - START */
 var findLowestCostNode = function(processed_nodes,costs){
     let lowest_cost_node = 'NONE',lowest_cost = Number.MAX_VALUE;
     Object?.keys(costs)?.forEach(
@@ -60,7 +60,7 @@ var findLowestCostNode = function(processed_nodes,costs){
     )
     return lowest_cost_node;
 }
-/* Find lowest cost node - START */
+/* Find lowest cost node - END */
 
 
 
@@ -100,7 +100,7 @@ while(node_to_process !== 'NONE'){
     processed_nodes.push(node_to_process);
     node_to_process = findLowestCostNode(processed_nodes,costs); // find the lowest cost node
 }
-/* Update costs of neighbours - START */
+/* Update costs of neighbours - END */
 
 
 

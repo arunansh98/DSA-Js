@@ -6,12 +6,12 @@ Write a program to check if there are any common elements between two arrays -> 
 
 var containsCommon = function(a,b) {
     let hashMap = {};
-    for(let i = 0; i < a.length; i++){ // O(n)
+    for(let i = 0; i < a.length; i++){ // O(a)
         if(!hashMap[a[i]]){
             hashMap[a[i]] = true;
         }
     }
-    for(let j = 0; j < b.length; j++){ // O(n)
+    for(let j = 0; j < b.length; j++){ // O(b)
         if(hashMap[b[j]]){
             return true;
         }
@@ -24,4 +24,5 @@ let b = ['z','y','b']
 console.log(containsCommon(a,b));
 
 
-// O(n + n = 2n  = n) = O(n)
+// Time Complexity  -> O(a + b)
+// Space Complexity  -> O(a)

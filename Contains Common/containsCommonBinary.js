@@ -6,9 +6,9 @@ Write a program to check if there are any common elements between two arrays -> 
 
 var containsCommon = function(a,b) {
     let i = 0;
-    a = a.sort((a,b)=>a-b); // nlogn 
-    while(i < b.length){ // n
-        if(containsEle(a,b[i])){ // logn
+    a = a.sort((a,b)=>a-b); // a*loga 
+    while(i < b.length){ // b
+        if(containsEle(a,b[i])){ // loga
             return true;
         }
         i++;
@@ -41,4 +41,6 @@ let b = ['z','y','x']
 console.log(containsCommon(a,b));
 
 
-// O(nlogn + nlogn = 2nlogn  = nlogn) = O(nlogn)
+// Time Complexity   ->  O(a*loga + b*loga = loga*(a+b)) = O(nlogn)
+// Space Complexity  ->  O(1)
+

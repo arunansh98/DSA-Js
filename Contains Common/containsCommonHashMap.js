@@ -6,12 +6,12 @@ Write a program to check if there are any common elements between two arrays -> 
 
 var containsCommon = function(a,b) {
     let hashMap = {};
-    for(let i = 0; i < a.length; i++){
+    for(let i = 0; i < a.length; i++){ // O(n)
         if(!hashMap[a[i]]){
             hashMap[a[i]] = true;
         }
     }
-    for(let j = 0; j < b.length; j++){
+    for(let j = 0; j < b.length; j++){ // O(n)
         if(hashMap[b[j]]){
             return true;
         }

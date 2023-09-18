@@ -20,21 +20,34 @@ function swap(arr,i,j){
 }
 
 let string1 = 'racecar';
-console.log(reverse1(string1)); 
+// console.log(reverse1(string1)); 
 
 
+
+// function reverse2(str){
+//     if(!str || str.length < 2 || typeof str!== 'string'){
+//         return 'Hmmm thats not good';
+//     }
+
+//     const backwards = [];
+//     const totalItems = str.length - 1;
+//     for(let i = totalItems; i >= 0; i--){
+//         backwards.push(str[i]);
+//     }
+//     return backwards.join("");
+// }
 
 function reverse2(str){
     if(!str || str.length < 2 || typeof str!== 'string'){
         return 'Hmmm thats not good';
     }
 
-    const backwards = [];
-    const totalItems = str.length - 1;
-    for(let i = totalItems; i >= 0; i--){
-        backwards.push(str[i]);
+    let reverse = "";
+    const lastIndex = str.length - 1;
+    for(let i = lastIndex; i >= 0; i--){
+        reverse = reverse + str[i];
     }
-    return backwards.join("");
+    return reverse;
 }
 
 function reverse3(str){
@@ -43,5 +56,5 @@ function reverse3(str){
 
 const reverse4 = str => [...str].reverse().join("");
 
-let string2 = 'racecar';
-console.log(reverse4(string2)); 
+let string2 = 'racecars';
+console.log(reverse2(string2)); 

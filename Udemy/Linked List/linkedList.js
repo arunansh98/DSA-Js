@@ -117,7 +117,7 @@ class LinkedList {
         }
     }
 
-    // my method
+    // my method(only reversing the values not the nodes itself)
     reverse1(){
         if(this.length > 1){
             let startNode = this.head;

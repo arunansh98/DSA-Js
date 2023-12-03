@@ -2,7 +2,7 @@
 
 Lets say you have to calculate all possible BT from 7 nodes.
 
-so what we will do is, we will break down the number of nodes into and left and right and calculate possible BST of each number of left and right nodes,
+so what we will do is, we will break down the number of nodes into and left and right and calculate possible BT of each number of left and right nodes,
 
 out of 7 nodes we have 1 node which is the root node,
 
